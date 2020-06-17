@@ -1,0 +1,30 @@
+#!/bin/bash
+BASEDIR=$PWD
+. $BASEDIR/io.sh 2 3 0 "$@"
+CURDIR=`pwd`
+set -e
+## INPUTS VARIABLES
+results_zip=${INPUTS1}
+x_csv=${INPUTS2}
+
+
+## PARAMETERS VARIABLES
+a=${PARAMS1}
+b=${PARAMS2}
+c=${PARAMS3}
+
+
+set -xe
+
+####### WRITE YOUR INVOCATION LINE AFTER THIS COMMENT
+
+
+pushd .
+python3 linemodel.py config.json
+popd
+
+
+####### WRITE YOUR INVOCATION LINE BEFORE THIS COMMENT
+set -e
+cd $BASEDIR
+. $BASEDIR/output.sh

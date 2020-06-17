@@ -1,0 +1,16 @@
+{
+"input" :
+  {
+  "dataset_name" : "${config_json}"
+},
+"output" :
+  {
+  "path" : "./"
+},
+"params" :
+  {
+  "a" : "${a}",
+  "b" : "${b}",
+  "c" : "${c}"
+  }
+}
